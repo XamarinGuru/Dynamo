@@ -207,7 +207,7 @@ namespace location2
 
 				InvokeOnMainThread(() =>
 				{
-					var authorID = AppSettings.isFakeUser ? AppSettings.CurrentUser.userId : AppSettings.CurrentUser.athleteId;
+					var authorID = AppSettings.CurrentUser.userId;
 
 					UpdateMemberNotes(txtComment.Text, authorID, selectedEvent._id, MemberModel.username, attended.On ? "1" : "0", txtTime.Text, txtDistance.Text, txtTss.Text, selectedEvent.type);
 

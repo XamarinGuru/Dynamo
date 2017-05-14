@@ -206,7 +206,7 @@ namespace goheja
 			{
 				ShowLoadingView(Constants.MSG_ADJUST_TRAINING);
 
-				var authorID = AppSettings.isFakeUser ? AppSettings.CurrentUser.userId : AppSettings.CurrentUser.athleteId;
+				var authorID = AppSettings.CurrentUser.userId;
 
 				UpdateMemberNotes(txtComment.Text, authorID, AppSettings.selectedEvent._id, MemberModel.username, attended.Checked ? "1" : "0", lblTime.Text, lblDistance.Text, lblTSS.Text, AppSettings.selectedEvent.type);
 
