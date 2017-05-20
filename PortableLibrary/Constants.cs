@@ -7,7 +7,7 @@ namespace PortableLibrary
 		public const int MAP_ZOOM_LEVEL = 15;
 
 		#region specification for each group
-		public const string SPEC_GROUP_TYPE = "nitro" ;
+		public const string SPEC_GROUP_TYPE = "dynamo" ;
 		public const string DEVICE_CALENDAR_TITLE = "Dynamo Calendar";
 		public const string GROUP_COLOR = "6EA8D6";
 		public const string MSG_SIGNUP_FAIL = "You are not registered to Dynamo services.";

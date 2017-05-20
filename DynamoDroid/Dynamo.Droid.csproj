@@ -370,6 +370,9 @@
     <AndroidResource Include="Resources\drawable\icon_circle_empty.png" />
     <AndroidResource Include="Resources\drawable\icon_check2.png" />
     <AndroidResource Include="Resources\drawable\icon_clock.png" />
+    <AndroidResource Include="Resources\layout\SplashActivity.axml" />
+    <AndroidAsset Include="video\splash.mp4" />
+    <AndroidResource Include="Resources\Raw\splash.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -397,6 +400,8 @@
     <Folder Include="Utility\" />
     <Folder Include="Adapter\" />
     <Folder Include="Resources\Anim\" />
+    <Folder Include="video\" />
+    <Folder Include="Resources\Raw\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="AndHUD">

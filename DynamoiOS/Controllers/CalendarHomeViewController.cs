@@ -303,15 +303,6 @@ namespace location2
 			mPChart.AxisX.ScrollTo(posX, XuniAxisScrollPosition.Max);
 		}
 
-		partial void ActionBack(UIButton sender)
-		{
-			if (AppSettings.CurrentUser.userType == (int)Constants.USER_TYPE.COACH)
-			{
-				AppSettings.isFakeUser = false;
-				rootVC.NavigationController.PopViewController(true);
-			}
-		}
-
 		#endregion
 
 		class MyMarkerView : XuniChartMarkerBaseView

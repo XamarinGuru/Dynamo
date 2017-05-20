@@ -6,36 +6,36 @@ using Android.Text;
 using System.Threading.Tasks;
 using Android.Content.PM;
 using PortableLibrary;
+using Android.Widget;
+using Android.Views;
+using Android.Media;
+using Android.Util;
+using System;
 
 namespace goheja
 {
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(MainLauncher = true, NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@android:style/Theme.NoTitleBar.Fullscreen")]
 
     public class SplashActivity : BaseActivity
     {
-        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
-        {
-            base.OnCreate(savedInstanceState, persistentState);
-        }
+		MediaPlayer player;
+		VideoView videoView;
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+            Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+			base.OnCreate(savedInstanceState);
 
-        protected override void OnResume()
-        {
-            base.OnResume();
+            SetContentView(Resource.Layout.SplashActivity);
+            videoView = FindViewById<VideoView>(Resource.Id.videoView);
 
-            Task startupWork = new Task(() =>
-            {
-                Task.Delay(500);  
-            });
+            var aaa = Android.Net.Uri.Parse("android.resource://" + Application.PackageName + "/" + Resource.Raw.splash);
+            videoView.SetVideoURI(aaa);
+            videoView.Start();
 
-            startupWork.ContinueWith(t =>
-            {
-                initiatAth();
-            }, TaskScheduler.FromCurrentSynchronizationContext());
+            videoView.Completion += GotoMainIfAlreadyLoggedin;
+		}
 
-            startupWork.Start();
-        }
-
-        public void initiatAth()
+        private void GotoMainIfAlreadyLoggedin(object sender, EventArgs e)
         {
 			if (!IsNetEnable()) return;
 

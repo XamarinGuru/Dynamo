@@ -191,6 +191,23 @@ namespace location2
 			return result;
 		}
 
+		//public string trackTF(string email, string password)
+		//{
+		//	var loginUser = new LoginUser();
+
+		//	try
+		//	{
+		//		var objUser = mTrackSvc.mobLogin(email, password, Constants.SPEC_GROUP_TYPE);
+		//		var jsonUser = FormatJsonType(objUser.ToString());
+		//		loginUser = JsonConvert.DeserializeObject<LoginUser>(jsonUser);
+		//		return objUser.ToString();
+		//	}
+		//	catch
+		//	{
+		//		return null;
+		//	}
+		//}
+
 		public LoginUser LoginUser(string email, string password)
 		{
 			var loginUser = new LoginUser();
