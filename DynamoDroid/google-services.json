@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "576602455322",
+    "firebase_url": "https://dynamo-f6241.firebaseio.com",
+    "project_id": "dynamo-f6241",
+    "storage_bucket": "dynamo-f6241.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576602455322:android:40d67734cb594464",
+        "android_client_info": {
+          "package_name": "goheja.dynamo.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576602455322-lefg859d25r2t76nc4lu22lj6t1bote4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB13_iDiZ7c3W-rnvttkbQz0-VayBtBck"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

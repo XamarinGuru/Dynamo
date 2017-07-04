@@ -159,6 +159,12 @@
   <wsdl:message name="IService1_athGeneralListMob_OutputMessage">
     <wsdl:part name="parameters" element="tns:athGeneralListMobResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_athGeneralListMobWithTypeAndId_InputMessage">
+    <wsdl:part name="parameters" element="tns:athGeneralListMobWithTypeAndId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_athGeneralListMobWithTypeAndId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:athGeneralListMobWithTypeAndIdResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_insertMultiToGroup_InputMessage">
     <wsdl:part name="parameters" element="tns:insertMultiToGroup" />
   </wsdl:message>
@@ -501,6 +507,30 @@
   <wsdl:message name="IService1_setComments_OutputMessage">
     <wsdl:part name="parameters" element="tns:setCommentsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_setCommentsMob_InputMessage">
+    <wsdl:part name="parameters" element="tns:setCommentsMob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_setCommentsMob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setCommentsMobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoaches_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCoaches" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoaches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoachesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoachesMob_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCoachesMob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoachesMob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoachesMobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoachesMobWithUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCoachesMobWithUserId" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCoachesMobWithUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoachesMobWithUserIdResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_setCommentsCoach_InputMessage">
     <wsdl:part name="parameters" element="tns:setCommentsCoach" />
   </wsdl:message>
@@ -518,6 +548,12 @@
   </wsdl:message>
   <wsdl:message name="IService1_getUserPmc_OutputMessage">
     <wsdl:part name="parameters" element="tns:getUserPmcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserPmcDesk_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserPmcDesk" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUserPmcDesk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserPmcDeskResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_getGaugesForMonth_InputMessage">
     <wsdl:part name="parameters" element="tns:getGaugesForMonth" />
@@ -608,6 +644,12 @@
   </wsdl:message>
   <wsdl:message name="IService1_fieldAthletsAndEvenetsMob_OutputMessage">
     <wsdl:part name="parameters" element="tns:fieldAthletsAndEvenetsMobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fieldAthletsAndEvenetsMobWithIdAndType_InputMessage">
+    <wsdl:part name="parameters" element="tns:fieldAthletsAndEvenetsMobWithIdAndType" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fieldAthletsAndEvenetsMobWithIdAndType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fieldAthletsAndEvenetsMobWithIdAndTypeResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_updateMomgoGroups_InputMessage">
     <wsdl:part name="parameters" element="tns:updateMomgoGroups" />
@@ -717,6 +759,12 @@
   <wsdl:message name="IService1_updateAthPersonalData_OutputMessage">
     <wsdl:part name="parameters" element="tns:updateAthPersonalDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_pasteEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:pasteEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_pasteEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pasteEventResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="decodeFitFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/decodeFitFile" message="tns:IService1_decodeFitFile_InputMessage" />
@@ -817,6 +865,10 @@
     <wsdl:operation name="athGeneralListMob">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/athGeneralListMob" message="tns:IService1_athGeneralListMob_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/athGeneralListMobResponse" message="tns:IService1_athGeneralListMob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="athGeneralListMobWithTypeAndId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/athGeneralListMobWithTypeAndId" message="tns:IService1_athGeneralListMobWithTypeAndId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/athGeneralListMobWithTypeAndIdResponse" message="tns:IService1_athGeneralListMobWithTypeAndId_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="insertMultiToGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/insertMultiToGroup" message="tns:IService1_insertMultiToGroup_InputMessage" />
@@ -1046,6 +1098,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/setComments" message="tns:IService1_setComments_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/setCommentsResponse" message="tns:IService1_setComments_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="setCommentsMob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/setCommentsMob" message="tns:IService1_setCommentsMob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/setCommentsMobResponse" message="tns:IService1_setCommentsMob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoaches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCoaches" message="tns:IService1_getCoaches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCoachesResponse" message="tns:IService1_getCoaches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoachesMob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCoachesMob" message="tns:IService1_getCoachesMob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCoachesMobResponse" message="tns:IService1_getCoachesMob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoachesMobWithUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCoachesMobWithUserId" message="tns:IService1_getCoachesMobWithUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCoachesMobWithUserIdResponse" message="tns:IService1_getCoachesMobWithUserId_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="setCommentsCoach">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/setCommentsCoach" message="tns:IService1_setCommentsCoach_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/setCommentsCoachResponse" message="tns:IService1_setCommentsCoach_OutputMessage" />
@@ -1057,6 +1125,10 @@
     <wsdl:operation name="getUserPmc">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUserPmc" message="tns:IService1_getUserPmc_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserPmcResponse" message="tns:IService1_getUserPmc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserPmcDesk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUserPmcDesk" message="tns:IService1_getUserPmcDesk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUserPmcDeskResponse" message="tns:IService1_getUserPmcDesk_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getGaugesForMonth">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getGaugesForMonth" message="tns:IService1_getGaugesForMonth_InputMessage" />
@@ -1117,6 +1189,10 @@
     <wsdl:operation name="fieldAthletsAndEvenetsMob">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/fieldAthletsAndEvenetsMob" message="tns:IService1_fieldAthletsAndEvenetsMob_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/fieldAthletsAndEvenetsMobResponse" message="tns:IService1_fieldAthletsAndEvenetsMob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fieldAthletsAndEvenetsMobWithIdAndType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fieldAthletsAndEvenetsMobWithIdAndType" message="tns:IService1_fieldAthletsAndEvenetsMobWithIdAndType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fieldAthletsAndEvenetsMobWithIdAndTypeResponse" message="tns:IService1_fieldAthletsAndEvenetsMobWithIdAndType_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="updateMomgoGroups">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateMomgoGroups" message="tns:IService1_updateMomgoGroups_InputMessage" />
@@ -1189,6 +1265,10 @@
     <wsdl:operation name="updateAthPersonalData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateAthPersonalData" message="tns:IService1_updateAthPersonalData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateAthPersonalDataResponse" message="tns:IService1_updateAthPersonalData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pasteEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/pasteEvent" message="tns:IService1_pasteEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/pasteEventResponse" message="tns:IService1_pasteEvent_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -1411,6 +1491,15 @@
     </wsdl:operation>
     <wsdl:operation name="athGeneralListMob">
       <soap:operation soapAction="http://tempuri.org/IService1/athGeneralListMob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="athGeneralListMobWithTypeAndId">
+      <soap:operation soapAction="http://tempuri.org/IService1/athGeneralListMobWithTypeAndId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1931,6 +2020,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="setCommentsMob">
+      <soap:operation soapAction="http://tempuri.org/IService1/setCommentsMob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoaches">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCoaches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoachesMob">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCoachesMob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoachesMobWithUserId">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCoachesMobWithUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="setCommentsCoach">
       <soap:operation soapAction="http://tempuri.org/IService1/setCommentsCoach" style="document" />
       <wsdl:input>
@@ -1951,6 +2076,15 @@
     </wsdl:operation>
     <wsdl:operation name="getUserPmc">
       <soap:operation soapAction="http://tempuri.org/IService1/getUserPmc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserPmcDesk">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUserPmcDesk" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2086,6 +2220,15 @@
     </wsdl:operation>
     <wsdl:operation name="fieldAthletsAndEvenetsMob">
       <soap:operation soapAction="http://tempuri.org/IService1/fieldAthletsAndEvenetsMob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fieldAthletsAndEvenetsMobWithIdAndType">
+      <soap:operation soapAction="http://tempuri.org/IService1/fieldAthletsAndEvenetsMobWithIdAndType" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2248,6 +2391,15 @@
     </wsdl:operation>
     <wsdl:operation name="updateAthPersonalData">
       <soap:operation soapAction="http://tempuri.org/IService1/updateAthPersonalData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pasteEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/pasteEvent" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
